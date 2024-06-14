@@ -1,12 +1,16 @@
-
+import React from 'react';
 import './App.css';
-import Background from './components/Background';
+
+
+import { ThemeProvider } from '@mui/material/styles';
+import theme from './components/Theme';
+import ResponsiveAppBar from './components/NavBar';
 
 function App() {
   return (
-    <div className="App">
-      <Background />
-    </div>
+    <ThemeProvider theme={theme} >
+        <ResponsiveAppBar />
+    </ThemeProvider>
   );
 }
 
